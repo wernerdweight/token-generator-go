@@ -1,4 +1,4 @@
-API Auth for Gin (Go Framework)
+Token Generator for Go
 ====================================
 
 A simple random token generator. This is a port of [TokenGenerator](https://github.com/wernerdweight/TokenGenerator/tree/master) for PHP.
