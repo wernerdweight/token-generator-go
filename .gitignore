@@ -1,0 +1,3 @@
+*.prof
+*.test
+!.env.test
