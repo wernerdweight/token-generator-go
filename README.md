@@ -22,18 +22,18 @@ Usage
 ------------
 
 ```go
-import "github.com/wernerdweight/token-generator-go"
+import generator "github.com/wernerdweight/token-generator-go"
 
 // default
-g := NewTokenGenerator("") // "" - default alphabet
+g := generator.NewTokenGenerator("") // "" - default alphabet
 token := g.Generate(32)    // produces a 32-character token
 // token would be something like "Ghll-NpLhRcWPHCGV7Ix-O2LFYSeKsES"
 
 // custom alphabet
-g := NewTokenGenerator("abc") // token will contain only characters from the alphabet "abc" 
+g := generator.NewTokenGenerator("abc") // token will contain only characters from the alphabet "abc" 
 
 // custom length
-g := NewTokenGenerator("")
+g := generator.NewTokenGenerator("")
 token := g.Generate(64) // produces a 64-character token
 ```
 
