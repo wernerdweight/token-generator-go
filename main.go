@@ -1,8 +1,8 @@
 package generator
 
 import (
+	"crypto/rand"
 	"math"
-	"math/rand"
 )
 
 const (
@@ -42,11 +42,11 @@ func getRandomNumberFromRange(min int, max int) int {
 		return min
 	}
 
-	log := math.Log2(float64(rangeSize))
+	log2 := math.Log2(float64(rangeSize))
 	// length in bytes
-	bytes := int(log/8) + 1
+	bytes := int(log2/8) + 1
 	// length in bits
-	bits := int(log) + 1
+	bits := int(log2) + 1
 	// set all lower bits to 1
 	filter := (1 << uint(bits)) - 1
 

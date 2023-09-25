@@ -44,3 +44,12 @@ func TestTokenGenerator_GenerateWithCustomAlphabetAndLength(t *testing.T) {
 		}
 	}
 }
+
+func TestTokenGenerator_RandomToken(t *testing.T) {
+	g := NewTokenGenerator("")
+	token1 := g.Generate(32)
+	token2 := g.Generate(32)
+	if token1 == token2 {
+		t.Error("TokenGenerator.Generate() should return random tokens")
+	}
+}
